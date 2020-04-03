@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
 
     <!-- Main css -->
+    <link rel="stylesheet" href="css/select.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -49,13 +50,17 @@
                             <div class="form-group">
                                 <div class="form-select">
                                     <div class="label-flex">
-                                        <label for="meal_preference">Sucursal</label>
-                                        
+                                        <label for="sucursal">Sucursal</label>
                                     </div>
-                                    <div class="select-list">
-                                        <select name="meal_preference" id="meal_preference">
-                                            <option value="1">Santo Domingo</option>
-                                            <option value="1">Santiago</option>
+                                    <div include="form-input-select()">
+                                        <select required name="sucursal" id="sucursal">
+                                          <option 
+                                                  hidden
+                                          >Seleccione la sucursal</option>
+                                      
+                                          <!-- normal options -->
+                                          <option value="1">Santo Domingo</option>
+                                          <option value="2">Santiago</option>
                                         </select>
                                     </div>
                                 </div>
@@ -110,8 +115,6 @@
 
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/nouislider/nouislider.min.js"></script>
-    <script src="vendor/wnumb/wNumb.js"></script>
     <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
     <script src="js/main.js"></script>
